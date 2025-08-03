@@ -71,15 +71,15 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="glass-card p-8 mb-8">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          <div>
-            <div className="text-lg text-purple-600 mb-1">Connected Wallet</div>
-            <div className="font-mono text-xl text-purple-700">
-              {connected && wallet?.publicKey?.toString()}
-              {!connected && <span className="text-purple-400">Not connected</span>}
+              <div className="glass-card p-8 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="text-lg text-metamask-600 mb-1">Connected Wallet</div>
+              <div className="font-mono text-xl text-metamask-700">
+                {connected && wallet?.publicKey?.toString()}
+                {!connected && <span className="text-metamask-400">Not connected</span>}
+              </div>
             </div>
-          </div>
           {connected && (
             <div className="mt-4 md:mt-0">
               <button 
@@ -97,19 +97,19 @@ const Dashboard = () => {
 
       <div>
         <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-          <User className="w-6 h-6 text-purple-600" /> Your Heirs
+          <User className="w-6 h-6 text-metamask-600" /> Your Heirs
         </h2>
         
         {loading ? (
-          <div className="glass-card p-8 text-center">
-            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-purple-600" />
-            <p className="text-purple-600">Loading heirs...</p>
+          <div className="metamask-card p-8 text-center">
+            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-metamask-600" />
+            <p className="text-metamask-600">Loading heirs...</p>
           </div>
         ) : heirs.length === 0 ? (
-          <div className="glass-card p-8 text-center">
-            <Coins className="w-12 h-12 mx-auto mb-4 text-purple-400" />
+          <div className="metamask-card p-8 text-center">
+            <Coins className="w-12 h-12 mx-auto mb-4 text-metamask-400" />
             <h3 className="text-lg font-semibold mb-2">No heirs found</h3>
-            <p className="text-purple-600 mb-4">You haven't added any heirs yet.</p>
+            <p className="text-metamask-600 mb-4">You haven't added any heirs yet.</p>
             <Link to="/add-heir" className="btn-primary">
               Add Your First Heir
             </Link>
@@ -117,34 +117,34 @@ const Dashboard = () => {
         ) : (
           <div className="grid md:grid-cols-2 gap-6">
             {heirs.map((heir, idx) => (
-              <div key={idx} className="glass-card p-6 flex flex-col gap-2">
+              <div key={idx} className="metamask-card p-6 flex flex-col gap-2">
                 <div className="flex items-center gap-2">
                   {heir.type === 'token' ? (
                     <Coins className="w-5 h-5 text-accent-600" />
                   ) : (
-                    <Coins className="w-5 h-5 text-purple-600" />
+                    <Coins className="w-5 h-5 text-metamask-600" />
                   )}
                   <span className="font-semibold text-lg">{heir.heir.slice(0, 8)}...{heir.heir.slice(-8)}</span>
                   <span className="ml-auto px-2 py-1 rounded glass-effect text-xs">
                     {heir.type.toUpperCase()}
                   </span>
                 </div>
-                <div className="text-purple-600">
+                <div className="text-metamask-600">
                   Amount: <span className="font-mono">{heir.amount}</span>
                 </div>
                 {heir.tokenMint && (
-                  <div className="text-purple-600 text-sm">
+                  <div className="text-metamask-600 text-sm">
                     Token: <span className="font-mono">{heir.tokenMint.slice(0, 8)}...{heir.tokenMint.slice(-8)}</span>
                   </div>
                 )}
                 <div className="text-sm">
                   Status: {heir.claimed ? (
-                    <span className="text-green-600 font-semibold">Claimed</span>
+                    <span className="text-success-600 font-semibold">Claimed</span>
                   ) : (
-                    <span className="text-yellow-600 font-semibold">Pending</span>
+                    <span className="text-warning-600 font-semibold">Pending</span>
                   )}
                 </div>
-                <div className="text-xs text-purple-500">
+                <div className="text-xs text-metamask-500">
                   Last Active: {heir.lastActive}
                 </div>
               </div>

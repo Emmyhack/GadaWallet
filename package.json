@@ -1,0 +1,17 @@
+{
+  "name": "gada-wallet",
+  "version": "1.0.0",
+  "description": "GadaWallet - A comprehensive Solana wallet application",
+  "private": true,
+  "scripts": {
+    "build": "cd gada/frontend && npm install && npm run build && rm -rf ../../dist && cp -r dist ../../dist",
+    "dev": "cd gada/frontend && npm run dev",
+    "preview": "cd gada/frontend && npm run preview"
+  },
+  "workspaces": [
+    "gada/frontend"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

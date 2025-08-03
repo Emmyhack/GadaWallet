@@ -50,10 +50,10 @@ const AddHeir = () => {
   return (
     <div className="max-w-xl mx-auto card p-8 mt-8">
       <h1 className="text-3xl font-bold gradient-text mb-6 flex items-center gap-2">
-        <UserPlus className="w-7 h-7 text-purple-600" /> Add Heir
+        <UserPlus className="w-7 h-7 text-metamask-600" /> Add Heir
       </h1>
       {!connected && (
-        <div className="mb-4 text-purple-600 font-semibold">Please connect your wallet to add an heir.</div>
+        <div className="mb-4 text-metamask-600 font-semibold">Please connect your wallet to add an heir.</div>
       )}
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div>

@@ -83,15 +83,15 @@ const BatchTransfer = () => {
   return (
     <div className="max-w-2xl mx-auto card p-8 mt-8">
       <h1 className="text-3xl font-bold gradient-text mb-6 flex items-center gap-2">
-        <Send className="w-7 h-7 text-purple-600" /> Batch Transfer
+        <Send className="w-7 h-7 text-metamask-600" /> Batch Transfer
       </h1>
       {!connected && (
-        <div className="mb-4 text-purple-600 font-semibold">Please connect your wallet to perform batch transfers.</div>
+        <div className="mb-4 text-metamask-600 font-semibold">Please connect your wallet to perform batch transfers.</div>
       )}
       
-      <div className="mb-6 p-4 bg-purple-50 rounded-lg">
-        <h3 className="font-semibold text-purple-800 mb-2">Batch Transfer Benefits</h3>
-        <p className="text-purple-700 text-sm">
+      <div className="mb-6 p-4 bg-metamask-50 rounded-lg">
+        <h3 className="font-semibold text-metamask-800 mb-2">Batch Transfer Benefits</h3>
+<p className="text-metamask-700 text-sm">
           Transfer multiple amounts in a single transaction. This saves on transaction fees 
           and allows for more efficient asset distribution. Maximum 10 transfers per batch.
         </p>

@@ -48,15 +48,15 @@ const UpdateActivity = () => {
   return (
     <div className="max-w-xl mx-auto card p-8 mt-8">
       <h1 className="text-3xl font-bold gradient-text mb-6 flex items-center gap-2">
-        <RefreshCw className="w-7 h-7 text-purple-600" /> Update Activity
+        <RefreshCw className="w-7 h-7 text-metamask-600" /> Update Activity
       </h1>
       {!connected && (
-        <div className="mb-4 text-purple-600 font-semibold">Please connect your wallet to update activity.</div>
+        <div className="mb-4 text-metamask-600 font-semibold">Please connect your wallet to update activity.</div>
       )}
       
-      <div className="mb-6 p-4 bg-purple-50 rounded-lg">
-        <h3 className="font-semibold text-purple-800 mb-2">Why Update Activity?</h3>
-        <p className="text-purple-700 text-sm">
+      <div className="mb-6 p-4 bg-metamask-50 rounded-lg">
+        <h3 className="font-semibold text-metamask-800 mb-2">Why Update Activity?</h3>
+<p className="text-metamask-700 text-sm">
           Updating your activity proves you're still active and prevents your heirs from claiming 
           your assets prematurely. This should be done regularly to maintain control over your inheritance.
         </p>

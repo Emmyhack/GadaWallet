@@ -17,31 +17,43 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+    @apply bg-metamask-600 hover:bg-metamask-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-metamask-500 focus:ring-offset-2 shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-purple-200 hover:bg-purple-300 text-purple-800 font-medium py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+    @apply bg-white hover:bg-metamask-50 text-metamask-700 font-medium py-3 px-6 rounded-xl border border-metamask-200 transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-metamask-500 focus:ring-offset-2 shadow-md hover:shadow-lg;
   }
   
   .btn-accent {
-    @apply bg-accent-600 hover:bg-accent-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+    @apply bg-accent-600 hover:bg-accent-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 shadow-lg hover:shadow-xl;
   }
   
   .card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply bg-white/95 backdrop-blur-sm border border-white/30 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300;
   }
   
   .input-field {
-    @apply w-full px-3 py-2 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200;
+    @apply w-full px-4 py-3 border border-metamask-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-metamask-500 focus:border-transparent transition-all duration-200 bg-white/90 backdrop-blur-sm;
   }
   
   .glass-effect {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    @apply bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/95 backdrop-blur-sm border border-white/30 rounded-2xl shadow-xl;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-metamask-600 to-metamask-800 bg-clip-text text-transparent;
+  }
+  
+  .metamask-gradient {
+    @apply bg-gradient-to-br from-metamask-500 via-metamask-600 to-metamask-700;
+  }
+  
+  .metamask-card {
+    @apply bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-sm border border-white/40 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300;
   }
 }
 
