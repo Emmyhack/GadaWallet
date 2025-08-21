@@ -8,7 +8,7 @@ function App() {
   return (
     <ErrorBoundary>
       <CivicAuthProvider 
-        clientId="f2fc33e0-3b6b-4ea7-bb5e-a5f60b45e808"
+        clientId={(import.meta as any).env?.VITE_CIVIC_AUTH_CLIENT_ID}
         displayMode="iframe"
         iframeMode="modal"
         onSignIn={(error) => {

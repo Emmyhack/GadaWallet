@@ -6,7 +6,12 @@ import { useWallet } from './WalletContext';
 import { useConnection } from '@solana/wallet-adapter-react';
 
 // Civic Gateway configuration
-const GATEKEEPER_NETWORK = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf'); // Civic Captcha Pass
+// Use environment configuration to ensure the gatekeeper network matches the selected cluster
+// Defaults are set to known Civic Captcha Pass networks for devnet and mainnet-beta
+const CLUSTER = (import.meta as any).env?.VITE_SOLANA_CLUSTER || 'devnet';
+const GKN_DEVNET = (import.meta as any).env?.VITE_CIVIC_GKN_DEVNET || 'tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf';
+const GKN_MAINNET = (import.meta as any).env?.VITE_CIVIC_GKN_MAINNET || 'tibePmPaoTgrs929rWPUrH4QyYqJE7xVJ9mfjTthM7g';
+const GATEKEEPER_NETWORK = new PublicKey(CLUSTER === 'mainnet-beta' ? GKN_MAINNET : GKN_DEVNET);
 
 interface CivicContextType {
   isVerified: boolean;
@@ -72,7 +77,7 @@ export const CivicProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     <GatewayProvider
       wallet={wallet as any}
       connection={connection}
-      cluster="devnet"
+      cluster={CLUSTER as any}
       gatekeeperNetwork={GATEKEEPER_NETWORK}
       options={{
         autoShowModal: false, // We'll control when to show the modal

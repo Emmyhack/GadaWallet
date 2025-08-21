@@ -36,8 +36,8 @@ export default defineConfig({
         script-src 'self' 'unsafe-inline';
         style-src 'self' 'unsafe-inline';
         img-src 'self' data: https: https://drive.google.com https://lh3.googleusercontent.com;
-        connect-src 'self' https://api.devnet.solana.com https://api.mainnet-beta.solana.com https://explorer.solana.com https://*.civic.com https://civic.com wss://api.devnet.solana.com wss://api.mainnet-beta.solana.com;
-        frame-src 'self' https://*.civic.com https://civic.com;
+        connect-src 'self' https://api.devnet.solana.com https://api.mainnet-beta.solana.com https://explorer.solana.com https://*.civic.com https://civic.com https://gatekeeper-api.civic.com wss://api.devnet.solana.com wss://api.mainnet-beta.solana.com;
+        frame-src 'self' https://*.civic.com https://civic.com https://pass.civic.com https://passv2.civic.com;
         object-src 'none';
         base-uri 'self';
         form-action 'self';
